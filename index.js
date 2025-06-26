@@ -34,5 +34,14 @@ const fareQuadrupler = createFareMultiplier(4);
 console.log(fareDoubler(10));     // 20
 console.log(fareTripler(10));     // 30
 console.log(fareQuadrupler(10));  // 40
+  
+function selectDifferentDrivers(drivers, driverSelector) {
+  return driverSelector(drivers);
+}
 
+console.log(selectDifferentDrivers(drivers, returnFirstTwoDrivers));
+// Output: ['Eric', 'Ashley']
+
+console.log(selectDifferentDrivers(drivers, returnLastTwoDrivers));
+// Output: ['Mark', 'Hope']
 
